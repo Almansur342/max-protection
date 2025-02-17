@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "./navbar/Navbar";
 
 export default function MainLayout() {
   return (
-    <div >
-      <h1 className="text-2xl text-red-600">reder here</h1>
+    <div>
+      <Navbar/>
       <Outlet/>
-      <h2 className="text-2xl text-red-600">footer</h2>
     </div>
   )
 }
