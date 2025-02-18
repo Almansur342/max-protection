@@ -1,10 +1,10 @@
 import { TSolutions } from "@/utils/type";
-import {solutions} from "../../lib/solutions";
+import { solutions } from "../../lib/solutions";
 import SingleSolutions from "./SingleSolutions";
 
 export default function Solutions() {
   return (
-    <div className="relative w-full my-20">
+    <div className="relative w-full my-8 md:my-20 lg:my-20 overflow-hidden px-3">
       <div className="text-center max-w-[700px] mx-auto">
         <button className="bg-[#1D0E45] text-white font-semibold px-2">
           What we do
@@ -18,10 +18,13 @@ export default function Solutions() {
           dolor sit amet
         </p>
       </div>
-      <div>
-        {solutions.map((solution : TSolutions) => {
-        return <SingleSolutions key={solution.id} solution={solution}/>
-      })}</div>
+      <div className="container mx-auto mt-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {solutions.map((solution: TSolutions) => {
+            return <SingleSolutions key={solution.id} solution={solution} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
